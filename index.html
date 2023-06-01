@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script type="module" src="./assets//js/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn btn-group item" id="focusZone">
+        FocusZone:
+        <input style="transform: scale(2)" type="checkbox" id="myCheck" />
+      </div>
+      <div class="btn-group item">
+        <div class="btn btn-action" id="suggest">
+          <div>Kiểm tra</div>
+        </div>
+        <div class="btn btn-action" id="checkLocation">Danh sách địa điểm</div>
+      </div>
+
+      <div class="import-kml item">
+        <input
+          type="file"
+          id="fileKml"
+          name="fileKml"
+          style="display: none"
+          accept="text/kml"
+        />
+        <label for="fileKml">
+          <div class="btn-submit btn" id="importBtn">
+            <span>Import file KML</span>
+            <img
+              style="margin-left: 5px"
+              src="./assets/images/iconupload.png"
+              width="25px"
+              height="25px"
+              alt=""
+            />
+          </div>
+        </label>
+      </div>
+      <div id="showkml item">
+        <div class="showlistkml">
+          <span> Danh sách file</span>
+
+          <img
+            style="margin-left: 5px"
+            src="./assets/images/dropdow.png"
+            width="20px"
+            height="20px"
+            alt=""
+          />
+        </div>
+        <div class="kml-files active"></div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvYo7tmhezL5_A9yzyx2eT0D3si5ouTh8&libraries=geometry,drawing&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
